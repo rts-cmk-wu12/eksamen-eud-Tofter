@@ -1,0 +1,27 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid rgb(217, 217, 217);
+    padding-top: 1rem;
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        a {
+            text-decoration: none;
+        }
+
+        &-capitalize {
+            text-transform: capitalize;
+        }
+
+        &__title{
+        display: flex;
+        gap: .8rem;
+        align-items: center;
+        justify-content: center;
+    }
+    }
+}

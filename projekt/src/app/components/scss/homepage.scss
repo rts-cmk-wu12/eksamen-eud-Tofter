@@ -1,0 +1,29 @@
+.wrapper{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.pricing{
+    display: flex;
+    gap: 1rem;
+
+    button{
+        border-radius: 11px;
+        border: none;
+        width: 100%;
+        padding: .2rem 1rem;
+    }
+}
+
+.content{
+
+   &__list{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+} 
+
+}
