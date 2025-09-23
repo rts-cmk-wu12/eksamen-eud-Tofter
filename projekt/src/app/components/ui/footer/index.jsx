@@ -9,10 +9,10 @@ export default function Footer() {
     return (
         <footer className="footer">
             <ul className="footer__links">
-                <div className="footer__links__title">
+                <Link href={"/"} className="footer__links__title">
                     <Image src="/Icon.svg" width={40} height={40} alt="" />
                     <h2>SwapHub</h2>
-                </div>
+                </Link>
                 <div className="footer__links__title">
                     <Link href={""}><BsTwitterX size={24} /></Link>
                     <Link href={""}><FaInstagram size={24} /></Link>

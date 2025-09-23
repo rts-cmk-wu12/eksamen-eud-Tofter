@@ -1,18 +1,19 @@
 import Search from "../components/search";
 import "../components/scss/homepage.scss";
 import ListingsCard from "../components/listings-card";
+import SearchProvider from "../components/providers/search-providers";
 
 export default async function HomePage() {
 
     const response = await fetch("http://localhost:4000/api/v1/listings")
     const json = await response.json()
 
-    console.log(json);
-
     return (
         <>
         <div className="wrapper">
-            <Search />
+            <SearchProvider>
+            <Search json={json} />
+            </SearchProvider>
             <div className="pricing">
                 <button>New</button>
                 <button>Price ascending</button>

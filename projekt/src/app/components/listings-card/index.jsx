@@ -6,7 +6,7 @@ import './listings-card.scss';
 export default function ListingsCard({ listings }) {
 
     return (
-        <Link className="listings" href={`/listing/${listings.id}`}>
+        <Link className="listings" href={`listing-details/${listings.id}`}>
             <div>
             <Image src={listings.asset.url} width={200} height={200} alt=""></Image>
             </div>

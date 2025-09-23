@@ -1,6 +1,6 @@
 @use '../../../variables';
 
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     text-align: center;
@@ -8,30 +8,33 @@
     border-bottom: 2px solid rgb(217, 217, 217);
     padding-bottom: 2rem;
 
-    &__title{
+    &__title {
         display: flex;
         align-items: center;
         gap: 1rem;
+        text-decoration: none;
 
-        h1{
+        h1 {
             font-size: 18px;
         }
     }
-    &__links{
+
+    &__links {
         display: flex;
         gap: 1rem;
-        
-        a{
+
+        a {
             text-decoration: none;
         }
 
-        &-buttons{
+        &-buttons {
             display: flex;
             gap: 1rem;
         }
     }
 
-    &__title, &__links{
+    &__title,
+    &__links {
         margin: 0 2rem;
     }
 }

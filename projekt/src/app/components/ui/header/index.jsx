@@ -9,17 +9,17 @@ export default function Header() {
 
     return (
         <header className="header">
-            <div className="header__title">
+            <Link href={"/"} className="header__title">
                 <Image src="/icon.svg" width={30} height={30} alt=""/>
                 <h1>SwapHub</h1>
-            </div>
+            </Link>
             <div className="header__links">
                 <Link href={""}>Listings</Link>
                 <Link href={""}>Community</Link>
                 <Link href={""}>Contact</Link>
                 <div className="header__links-buttons">
-                    <button>Sign in</button>
-                    <button>Register</button>
+                    <Link href={"/login"}>Sign in</Link>
+                    <Link href={""}>Register</Link>
                 </div>
             </div>
         </header>
