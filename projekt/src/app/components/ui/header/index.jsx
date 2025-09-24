@@ -14,7 +14,7 @@ export default function Header() {
                 <h1>SwapHub</h1>
             </Link>
             <div className="header__links">
-                <Link href={""}>Listings</Link>
+                <Link href={"/"}>Listings</Link>
                 <Link href={""}>Community</Link>
                 <Link href={""}>Contact</Link>
                 <div className="header__links-buttons">

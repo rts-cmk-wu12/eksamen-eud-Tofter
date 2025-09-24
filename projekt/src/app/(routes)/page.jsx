@@ -23,7 +23,7 @@ export default async function HomePage() {
         <div className="content">
             <ul className="content__list">
                 {json.map(listings => (
-                    <li key={listings.id}>
+                    <li className="content__item" key={listings.id}>
                         <ListingsCard listings={listings} />
                     </li>
                 ))}

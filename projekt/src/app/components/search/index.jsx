@@ -5,7 +5,7 @@ import { CiSearch } from "react-icons/ci";
 import { useContext } from "react";
 import { searchContext } from "../providers/search-providers";
 
-export default function Search({json}) {
+export default function Search({ json }) {
 
     const { setResults, setErrorMsg } = useContext(searchContext);
 
@@ -24,6 +24,7 @@ export default function Search({json}) {
         }
         setResults(filteredData);
     }
+
 
     return (
 

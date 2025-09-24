@@ -1,4 +1,4 @@
-.wrapper{
+.wrapper {
     display: flex;
     align-items: center;
     text-align: center;
@@ -6,11 +6,11 @@
     margin: 1rem 0;
 }
 
-.pricing{
+.pricing {
     display: flex;
     gap: 1rem;
 
-    button{
+    button {
         border-radius: 11px;
         border: none;
         width: 100%;
@@ -18,12 +18,22 @@
     }
 }
 
-.content{
+.content {
+    
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+    
+    &__item{
+        width: auto;
+        border: 1px solid;
+        border-radius: 9px;
+        padding: 1rem;
 
-   &__list{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 1rem;
-} 
-
+        a{
+            text-decoration: none;
+        }
+    }
 }
