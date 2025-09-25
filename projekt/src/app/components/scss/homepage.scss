@@ -24,10 +24,11 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
+        margin: auto;
     }
     
     &__item{
-        width: auto;
+        width: 500px;
         border: 1px solid;
         border-radius: 9px;
         padding: 1rem;

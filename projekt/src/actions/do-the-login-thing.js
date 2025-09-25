@@ -32,10 +32,16 @@ export default async function DoTheLoginThing(prevState, formData) {
         password: validated.data.password
     })
 })
+
+if ( !response.ok) return {
+    success: false,
+    errors: ["something's not quite right"],
+    data: {
+        email,
+        password
+    }
+}
 const json = await response.json()
-console.log('login', json);
-
-
 
 if (!json) return {
     success: false,

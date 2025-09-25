@@ -1,3 +1,21 @@
-.swap{
+.swap {
     margin-top: 3.5rem;
+    font-size: 25px;
+
+    &__list {
+        display: flex;
+        margin-top: 1rem;
+        gap: 1rem;
+
+        &__items {
+            width: auto;
+            border: 1px solid;
+            border-radius: 9px;
+            padding: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
 }

@@ -37,13 +37,13 @@ export default function LoginForm() {
                 <div className='form__input-container'>
                     <label>Email</label>
                     <input placeholder="Email" type="text" name="email" />
-                    <span>{formState?.properties?.email.errors}</span>
+                    <span>{formState?.properties?.email?.errors}</span>
                 </div>
 
                 <div className='form__input-container'>
                     <label>Password</label>
                     <input placeholder="Password" type="password" name="password" />
-                    <span>{formState?.properties?.password.errors}</span>
+                    <span>{formState?.properties?.password?.errors}</span>
                 </div>
 
                 <div className='form__button-container'>

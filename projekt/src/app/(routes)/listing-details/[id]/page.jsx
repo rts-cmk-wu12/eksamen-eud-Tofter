@@ -24,7 +24,7 @@ export default async function ListingsDetails({ params }) {
                     <button className="details__description-button">Propose a swap</button>
                 </div>
             </div>
-            <OtherSwap/>
+            <OtherSwap json={json}/>
         </div>
             
         </>

@@ -19,7 +19,7 @@ export default function Header() {
                 <Link href={""}>Contact</Link>
                 <div className="header__links-buttons">
                     <Link href={"/login"}>Sign in</Link>
-                    <Link href={""}>Register</Link>
+                    <Link href={"/register"}>Register</Link>
                 </div>
             </div>
         </header>
