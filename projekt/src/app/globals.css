@@ -9,7 +9,11 @@
 }
 
 body{
-  margin: 2rem 5rem 0 5rem;
+  margin: 2rem 10rem 0 10rem;
+}
+
+main{
+  margin: 0 3rem;
 }
 
 img{

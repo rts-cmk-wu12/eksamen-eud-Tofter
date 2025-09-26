@@ -10,13 +10,13 @@ export default function Header() {
     return (
         <header className="header">
             <Link href={"/"} className="header__title">
-                <Image src="/icon.svg" width={30} height={30} alt=""/>
+                <Image src="/icon.svg" width={30} height={30} alt="" />
                 <h1>SwapHub</h1>
             </Link>
             <div className="header__links">
                 <Link href={"/"}>Listings</Link>
-                <Link href={""}>Community</Link>
-                <Link href={""}>Contact</Link>
+                <Link href={"#"}>Community</Link>
+                <Link href={"/contact"}>Contact</Link>
                 <div className="header__links-buttons">
                     <Link href={"/login"}>Sign in</Link>
                     <Link href={"/register"}>Register</Link>

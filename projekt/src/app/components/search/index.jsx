@@ -25,7 +25,6 @@ export default function Search({ json }) {
         setResults(filteredData);
     }
 
-
     return (
 
         <>

@@ -1,10 +1,13 @@
 import LoginForm from "@/app/components/ui/login";
+import Link from "next/link";
 
 export default async function Login() {
 
-    return(
+    return (
         <>
-			<LoginForm />
+            <LoginForm />
+            <Link href={"/profile"}>Profile</Link>
+            
         </>
     )
 }

@@ -4,33 +4,29 @@ import "./login.scss";
 import { useActionState, useEffect } from 'react';
 import DoTheLoginThing from '@/actions/do-the-login-thing';
 import Link from "next/link";
-import { redirect } from "next/dist/server/api-utils";
 import { toast, ToastContainer } from "react-toastify";
 
 export default function LoginForm() {
 
     const [formState, formAction, isPending] = useActionState(DoTheLoginThing);
 
-	useEffect(function () {
-		isPending ? toast.loading("Logger ind...", { toastId: "loader" }) : toast.dismiss();
+    useEffect(function () {
+        isPending ? toast.loading("Logger ind...", { toastId: "loader" }) : toast.dismiss();
 
-		if (formState?.success) {
-			toast.update("loader", {
-				toastId: "loader",
-				render: "Du er nu logget ind!",
-				type: "success",
-				isLoading: false,
-				closeOnClick: false,
-				hideProgressBar: true,
-				position: "top-right"
-			});
-			setTimeout(function () {
-				redirect("/");
-			}, 2000);
-		}
-	}, [formState, isPending]);
+        if (formState?.success) {
+            toast.update("loader", {
+                toastId: "loader",
+                render: "Du er nu logget ind!",
+                type: "success",
+                isLoading: false,
+                closeOnClick: false,
+                hideProgressBar: true,
+                position: "top-right"
+            });
+        }
+    }, [formState, isPending]);
 
-    return isPending ? <p>loading...</p> : (
+    return /* isPending ? <p>loading...</p> : */ (
         <>
             <form action={formAction} className='form'>
 

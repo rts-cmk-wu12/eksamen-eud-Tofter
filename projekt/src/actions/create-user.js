@@ -1,6 +1,5 @@
 "use server";
 
-import { cookies } from "next/headers";
 import z from "zod";
 
 export default async function CreateUser(prevState, formData) {
@@ -12,10 +11,10 @@ export default async function CreateUser(prevState, formData) {
     
 
     const schema = z.object({
-        firstname: z.string().min(1, { message: "Give firstname" }).max(50, { message: "Too much" }),
-        lastname: z.string().min(1, { message: "lastname duh" }),
-        email: z.string().min(1, { message: "doh" }),
-        password: z.string().min(1, { message: "glazer" })
+        firstname: z.string().min(1, { message: "firstname too short" }).max(50, { message: "Too much" }),
+        lastname: z.string().min(1, { message: "lastname too short" }),
+        email: z.string().min(1, { message: "email too short" }),
+        password: z.string().min(1, { message: "password too short" })
     })
 
     const validated = schema.safeParse({
@@ -30,9 +29,6 @@ export default async function CreateUser(prevState, formData) {
         ...(z.treeifyError(validated.error))
     }
 
-    const cookieStore = await cookies();
-    /* const access_token = cookieStore.get("userCookie"); */
-
     const response = await fetch("http://localhost:4000/api/v1/users", {
         headers: {
             "Content-Type": "application/json"
@@ -45,6 +41,8 @@ export default async function CreateUser(prevState, formData) {
             password: validated.data.password,
         })
     });
+    
+    console.log("response", response);
 
     if( response.status !== 201) return {
         success: false,

@@ -13,12 +13,11 @@ export default async function Profile() {
         }
     })
     const jsonUser = await response.json()
-    console.log(jsonUser);
-    
 
-    return(
+
+    return (
         <>
-        <h2>Hej {jsonUser.firstname} {jsonUser.lastname}</h2>
+            <h2>Hej {jsonUser.firstname} {jsonUser.lastname}</h2>
         </>
     )
 }
